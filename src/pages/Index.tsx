@@ -1,19 +1,35 @@
-import { Header } from "@/components/Header";
-import { HeroNew } from "@/components/HeroNew";
-import { ProductsNew } from "@/components/ProductsNew";
-import { ServicesNew } from "@/components/ServicesNew";
-import { ContactNew } from "@/components/ContactNew";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { useState } from "react";
+import { Header, Footer } from "@/components/layout";
+import {
+  HeroSection,
+  ProductsSection,
+  ServicesSection,
+} from "@/components/sections";
+import { WhatsAppButton } from "@/components/features";
+
+export interface CartItem {
+  productIndex: number;
+  productTitle: string;
+  variationIndex: number;
+  variationName: string;
+  price: string;
+  quantity: number;
+  flavor?: string;
+  minQuantity?: number;
+}
 
 const Index = () => {
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState<boolean>(false);
+
   return (
     <div className="min-h-screen">
-      <Header />
-      <HeroNew />
-      <ProductsNew />
-      <ServicesNew />
-      <ContactNew />
+      <Header cart={cart} cartOpen={cartOpen} setCartOpen={setCartOpen} />
+      <main>
+        <HeroSection />
+        <ProductsSection cart={cart} setCart={setCart} cartOpen={cartOpen} setCartOpen={setCartOpen} />
+        <ServicesSection />
+      </main>
       <Footer />
       <WhatsAppButton />
     </div>
