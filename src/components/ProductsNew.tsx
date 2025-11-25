@@ -10,25 +10,45 @@ export const ProductsNew = () => {
       image: photoMagnet,
       title: "Photo Magnets",
       size: "2×2 inch",
-      features: ["High-quality print", "Durable magnetic sheet", "Perfect for fridge & gifting"],
+      features: [
+        "Perfect for fridge décor & gifting",
+        "High-quality print with vibrant colors",
+        "Durable magnetic backing",
+        "Ideal for bulk orders & events"
+      ],
     },
     {
       image: acrylicMagnet,
-      title: "Acrylic Magnets",
+      title: "Acrylic Fridge Magnets",
       size: "2.5×3.5 to 4×6 inch",
-      features: ["Fridge magnets only", "Double-sided print", "2-in-1: Magnet + Stand option"],
+      features: [
+        "Small (2.5×3.5): Double-sided printing",
+        "Medium (3×4): 2-in-1 magnet + stand",
+        "Large (4×6): Best for portraits",
+        "Premium crystal-clear acrylic"
+      ],
     },
     {
       image: acrylicFrame,
-      title: "Photo Frames",
-      size: "5×5 to A4",
-      features: ["Normal photo frames", "Table or wall display", "Crystal clear premium acrylic"],
+      title: "Acrylic Photo Frames",
+      size: "5×5, 5×6 & A4",
+      features: [
+        "5×5: Square format for couples & memories",
+        "5×6: Portrait format for single photos",
+        "A4: Large display for certificates & decor",
+        "Table or wall display options"
+      ],
     },
     {
       image: eventStall,
       title: "Event Services",
       size: "Live Photo Printing",
-      features: ["On-site photo booth setup", "Instant click, edit & print", "Perfect for weddings & parties"],
+      features: [
+        "On-site photo booth setup",
+        "Instant click, edit & print",
+        "Perfect for weddings & parties",
+        "Take-away gifts for guests"
+      ],
     },
   ];
 
