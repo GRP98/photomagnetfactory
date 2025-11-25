@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -45,6 +45,30 @@ export const Footer = () => {
               <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="https://api.whatsapp.com/send?phone=918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h4 className="text-xl font-semibold mb-4">Contact</h4>
+            <ul className="space-y-3 opacity-80 text-sm">
+              <li>Pileru, Andhra Pradesh</li>
+              <li>+91 82474 75914</li>
+              <li>
+                <a href="mailto:photomagnetfactory@gmail.com" className="hover:text-primary transition-colors">
+                  photomagnetfactory@gmail.com
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.instagram.com/photo_magnet_factory/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  @photo_magnet_factory
+                </a>
+              </li>
             </ul>
           </div>
         </div>
