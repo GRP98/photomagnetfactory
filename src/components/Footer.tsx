@@ -32,8 +32,25 @@ export const Footer = () => {
           
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
-            <p className="opacity-90 mb-2">📍 Pileru, Andhra Pradesh</p>
-            <p className="opacity-90">📱 +91 82474 75914</p>
+            <ul className="space-y-2 opacity-90">
+              <li>📍 Pileru, Andhra Pradesh</li>
+              <li>📱 +91 82474 75914</li>
+              <li>
+                <a href="mailto:photomagnetfactory@gmail.com" className="hover:text-primary transition-colors">
+                  ✉️ photomagnetfactory@gmail.com
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.instagram.com/photo_magnet_factory/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  📸 @photo_magnet_factory
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         
