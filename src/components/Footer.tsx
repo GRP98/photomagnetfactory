@@ -12,39 +12,50 @@ export const Footer = () => {
           {/* Brand Section */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src={logo} 
-                alt="Photo Magnet Factory Logo" 
-                className="w-12 h-12 rounded-full"
-              />
-              <h3 className="text-2xl font-bold">
-                Photo Magnet Factory
-              </h3>
+              <img src={logo} alt="Photo Magnet Factory Logo" className="w-12 h-12 rounded-full" />
+              <h3 className="text-2xl font-bold">Photo Magnet Factory</h3>
             </div>
-            <h4 className="font-semibold text-lg mb-2">
-              Custom Photo Magnets & Acrylic Frames
-            </h4>
+            <h4 className="font-semibold text-lg mb-2">Custom Photo Magnets & Acrylic Frames</h4>
             <p className="opacity-80 text-sm">
-              Premium prints delivered fast - gifts, decor & events.
+              Fast delivery, high-quality prints, bulk orders across India, and live instant-print stalls for weddings,
+              birthdays & all functions.{" "}
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 opacity-80">
               <li>
-                <button 
-                  onClick={() => setAboutOpen(true)} 
-                  className="hover:text-primary transition-colors text-left"
-                >
+                <button onClick={() => setAboutOpen(true)} className="hover:text-primary transition-colors text-left">
                   About Us
                 </button>
               </li>
-              <li><a href="#products" className="hover:text-primary transition-colors">Products</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="https://api.whatsapp.com/send?phone=918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
+              <li>
+                <a href="#products" className="hover:text-primary transition-colors">
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-primary transition-colors">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-primary transition-colors">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=918247475914"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -60,9 +71,9 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://www.instagram.com/photo_magnet_factory/" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/photo_magnet_factory/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
@@ -72,12 +83,12 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="opacity-80">&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
-      
+
       <AboutDialog open={aboutOpen} onOpenChange={setAboutOpen} />
     </footer>
   );
