@@ -22,7 +22,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-background py-20">
+      <div className="relative z-10 container mx-auto px-4 text-center text-background py-20 mt-20">
         <div className="max-w-4xl mx-auto space-y-6 animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Instant Custom Photo Magnets & Acrylic Frames

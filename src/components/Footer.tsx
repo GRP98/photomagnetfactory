@@ -1,14 +1,23 @@
+import logo from "@/assets/logo.png";
+
 export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-              Photo Magnets Pileru
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logo} 
+                alt="Photo Magnet Factory Logo" 
+                className="w-12 h-12"
+              />
+              <h3 className="text-2xl font-bold">
+                Photo Magnet Factory
+              </h3>
+            </div>
             <p className="opacity-90">
-              Premium photo magnets, acrylic frames, and live event stalls
+              Premium photo magnets, acrylic frames, and live event stalls in Pileru
             </p>
           </div>
           
@@ -29,7 +38,7 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-background/20 pt-8 text-center opacity-90">
-          <p>&copy; {new Date().getFullYear()} Photo Magnets Pileru. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
     </footer>
