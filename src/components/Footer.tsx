@@ -23,8 +23,8 @@ export const Footer = () => {
             <h4 className="font-semibold text-lg mb-2">
               Custom Photo Magnets & Acrylic Frames
             </h4>
-            <p className="opacity-80 text-sm leading-relaxed">
-              Premium personalised prints for gifts, decor & events - with fast delivery, bulk orders, and live on-spot photo-magnet stalls.
+            <p className="opacity-80 text-sm">
+              Premium quality prints delivered fast. Perfect for gifts, decor & events.
             </p>
           </div>
           
