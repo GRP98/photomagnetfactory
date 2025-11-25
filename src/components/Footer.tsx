@@ -1,6 +1,10 @@
 import logo from "@/assets/logo.png";
+import { AboutDialog } from "./AboutDialog";
+import { useState } from "react";
 
 export const Footer = () => {
+  const [aboutOpen, setAboutOpen] = useState(false);
+
   return (
     <footer className="bg-slate-950 text-white py-12">
       <div className="container mx-auto px-4">
@@ -27,6 +31,14 @@ export const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 opacity-80">
+              <li>
+                <button 
+                  onClick={() => setAboutOpen(true)} 
+                  className="hover:text-primary transition-colors text-left"
+                >
+                  About Us
+                </button>
+              </li>
               <li><a href="#products" className="hover:text-primary transition-colors">Products</a></li>
               <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
@@ -62,6 +74,8 @@ export const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
+      
+      <AboutDialog open={aboutOpen} onOpenChange={setAboutOpen} />
     </footer>
   );
 };
