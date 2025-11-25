@@ -26,7 +26,7 @@ export const Footer = () => {
             <ul className="space-y-2 opacity-90">
               <li><a href="#products" className="hover:text-primary transition-colors">Products</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="https://wa.me/918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
+              <li><a href="https://api.whatsapp.com/send?phone=918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
             </ul>
           </div>
           

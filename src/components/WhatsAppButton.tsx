@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export const WhatsAppButton = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/918247475914', '_blank');
+    window.open('https://api.whatsapp.com/send?phone=918247475914', '_blank');
   };
 
   return (
