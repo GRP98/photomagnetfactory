@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://grp98.github.io/photomagnetfactory/",
+  "homepage": "https://GRP98.github.io/photomagnetfactory/",
   "scripts": {
     "dev": "vite --open --port 3000",
     "start": "vite --open --port 3000",
