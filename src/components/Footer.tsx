@@ -8,7 +8,8 @@ export const Footer = () => {
   return (
     <footer className="bg-slate-950 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* Brand Section */}
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
@@ -28,6 +29,7 @@ export const Footer = () => {
             </p>
           </div>
           
+          {/* Quick Links */}
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 opacity-80">
@@ -45,33 +47,13 @@ export const Footer = () => {
               <li><a href="https://api.whatsapp.com/send?phone=918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
             </ul>
           </div>
-          
-          <div>
-            <h4 className="text-xl font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 opacity-80">
-              <li>📍 Pileru, Andhra Pradesh</li>
-              <li>📱 +91 82474 75914</li>
-              <li>
-                <a href="mailto:photomagnetfactory@gmail.com" className="hover:text-primary transition-colors">
-                  ✉️ photomagnetfactory@gmail.com
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://www.instagram.com/photo_magnet_factory/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
-                >
-                  📸 @photo_magnet_factory
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center opacity-80">
-          <p>&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
+        <div className="border-t border-white/20 pt-8 text-center space-y-2">
+          <p className="opacity-80 text-sm">
+            📍 Pileru, Andhra Pradesh | 📱 +91 82474 75914 | ✉️ photomagnetfactory@gmail.com
+          </p>
+          <p className="opacity-80">&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
       
