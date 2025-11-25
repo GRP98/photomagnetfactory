@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import photoMagnet from "@/assets/photo-magnet.jpg";
 import acrylicMagnet from "@/assets/acrylic-magnet.jpg";
 import acrylicFrame from "@/assets/acrylic-frame.jpg";
-import eventStall from "@/assets/event-stall.jpg";
 
 export const ProductsNew = () => {
   const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
@@ -113,29 +112,6 @@ export const ProductsNew = () => {
         }
       ]
     },
-    {
-      image: eventStall,
-      title: "Event Services",
-      size: "Live Photo Printing",
-      features: [
-        "On-site photo booth setup",
-        "Instant click, edit & print",
-        "Perfect for weddings & parties",
-        "Take-away gifts for guests"
-      ],
-      variations: [
-        {
-          name: "Live Photo-Magnet Stall",
-          description: "Perfect for events",
-          features: [
-            "Instant click → edit → print workflow",
-            "On-site photo booth setup",
-            "Take-away gifts for guests",
-            "Ideal for weddings, birthdays & corporate events"
-          ]
-        }
-      ]
-    },
   ];
 
   return (
@@ -143,7 +119,7 @@ export const ProductsNew = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Our Products & Services
+            Our Products
           </h2>
           <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -151,7 +127,7 @@ export const ProductsNew = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, index) => (
             <Card 
               key={index}
