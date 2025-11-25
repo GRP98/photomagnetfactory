@@ -53,7 +53,34 @@ npm run preview
 - GitHub repository: `photomagnetfactory`
 - `gh-pages` package (already installed)
 
-### Deploy Steps
+### Option 1: Automatic Deployment with GitHub Actions (Recommended)
+
+The project includes a GitHub Actions workflow that automatically deploys your site when you push to the `main` branch.
+
+1. **Push your code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Setup GitHub Pages deployment"
+   git push origin main
+   ```
+
+2. **Configure GitHub Pages:**
+   - Go to your repository: https://github.com/GRP98/photomagnetfactory
+   - Click **Settings** → **Pages**
+   - Under **Build and deployment** → **Source**, select:
+     - Source: `Deploy from a branch`
+     - Branch: `gh-pages`
+     - Folder: `/ (root)`
+   - Click **Save**
+
+3. **Your site will be live at:**
+   ```
+   https://GRP98.github.io/photomagnetfactory/
+   ```
+
+**Future updates:** Just push to `main` branch and the site will automatically deploy!
+
+### Option 2: Manual Deployment with gh-pages
 
 1. **Build and deploy:**
 
@@ -81,15 +108,7 @@ npm run preview
    https://GRP98.github.io/photomagnetfactory/
    ```
 
-### Future Updates
-
-To update the deployed site, simply run:
-
-```bash
-npm run deploy
-```
-
-The site will update automatically within 1-2 minutes.
+**Future updates:** Run `npm run deploy` whenever you want to update the site.
 
 ## Project Structure
 
