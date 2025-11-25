@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, MessageCircle, Mail, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const ContactNew = () => {
@@ -61,95 +60,22 @@ export const ContactNew = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-muted/30">
+    <section id="contact" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-12 md:mb-16">
+        <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">
-            Get In Touch
+            Send Us An Inquiry
           </h2>
           <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            Fill out the form below and we'll get back to you via WhatsApp
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
-          <div className="space-y-6">
-            {/* Location */}
-            <Card className="border-2 hover:border-primary transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Location</h3>
-                    <p className="text-muted-foreground">Pileru, Andhra Pradesh</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* WhatsApp */}
-            <Card className="border-2 border-secondary hover:shadow-medium transition-all duration-300 bg-gradient-secondary text-secondary-foreground">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4 mb-4">
-                  <MessageCircle className="w-6 h-6 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">WhatsApp</h3>
-                    <p className="opacity-90">+91 82474 75914</p>
-                  </div>
-                </div>
-                <Button 
-                  variant="heroOutline" 
-                  onClick={() => window.open('https://api.whatsapp.com/send?phone=918247475914', '_blank')}
-                  className="w-full bg-background text-secondary hover:bg-background/90"
-                >
-                  Chat Now
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Email */}
-            <Card className="border-2 hover:border-primary transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Email</h3>
-                    <a 
-                      href="mailto:photomagnetfactory@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      photomagnetfactory@gmail.com
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Instagram */}
-            <Card className="border-2 hover:border-accent transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <Instagram className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Instagram</h3>
-                    <a 
-                      href="https://www.instagram.com/photo_magnet_factory/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      @photo_magnet_factory
-                    </a>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Quick Contact Form */}
-          <Card className="border-2 hover:border-primary transition-all duration-300">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-2xl font-bold mb-6">Quick Inquiry</h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+        <Card className="max-w-2xl mx-auto border-2 hover:border-primary transition-all duration-300 shadow-lg">
+          <CardContent className="p-6 md:p-10">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
                 <Input
                   name="name"
                   placeholder="Your Name *"
@@ -167,6 +93,9 @@ export const ContactNew = () => {
                   required
                   className="h-12"
                 />
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-5">
                 <Input
                   name="email"
                   type="email"
@@ -183,40 +112,43 @@ export const ContactNew = () => {
                   onChange={handleChange}
                   className="h-12"
                 />
-                <Input
-                  name="eventLocation"
-                  placeholder="Event Location"
-                  value={formData.eventLocation}
-                  onChange={handleChange}
-                  className="h-12"
-                />
-                <Input
-                  name="productInterest"
-                  placeholder="Product Interest (e.g., Photo Magnets, Event Stall)"
-                  value={formData.productInterest}
-                  onChange={handleChange}
-                  className="h-12"
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Additional Message (Optional)"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={3}
-                  className="resize-none"
-                />
-                <Button 
-                  type="submit" 
-                  variant="hero" 
-                  size="lg"
-                  className="w-full text-base"
-                >
-                  Send via WhatsApp
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
+              </div>
+
+              <Input
+                name="eventLocation"
+                placeholder="Event Location (if applicable)"
+                value={formData.eventLocation}
+                onChange={handleChange}
+                className="h-12"
+              />
+
+              <Input
+                name="productInterest"
+                placeholder="Product/Service Interest (e.g., Photo Magnets, Event Stall)"
+                value={formData.productInterest}
+                onChange={handleChange}
+                className="h-12"
+              />
+
+              <Textarea
+                name="message"
+                placeholder="Your Message (Optional)"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                className="resize-none"
+              />
+
+              <Button 
+                type="submit" 
+                size="lg"
+                className="w-full text-base h-12"
+              >
+                Send Inquiry via WhatsApp
+              </Button>
+            </form>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
