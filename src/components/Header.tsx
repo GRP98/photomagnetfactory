@@ -9,8 +9,19 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          {/* Logo with click to scroll to top */}
+          <div 
+            className="flex items-center gap-3 cursor-pointer" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
+            aria-label="Scroll to top"
+          >
             <img 
               src={logo} 
               alt="Photo Magnet Factory Logo" 

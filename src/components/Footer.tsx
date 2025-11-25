@@ -32,26 +32,35 @@ export const Footer = () => {
                 </button>
               </li>
               <li>
-                <a href="#products" className="hover:text-primary transition-colors">
+                <button 
+                  onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })} 
+                  className="hover:text-primary transition-colors text-left"
+                >
                   Products
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#services" className="hover:text-primary transition-colors">
+                <button 
+                  onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })} 
+                  className="hover:text-primary transition-colors text-left"
+                >
                   Services
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#contact" className="hover:text-primary transition-colors">
+                <button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} 
+                  className="hover:text-primary transition-colors text-left"
+                >
                   Contact
-                </a>
+                </button>
               </li>
               <li>
                 <a
                   href="https://api.whatsapp.com/send?phone=918247475914"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-primary transition-colors inline-block"
                 >
                   WhatsApp
                 </a>
