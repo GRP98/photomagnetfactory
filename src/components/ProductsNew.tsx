@@ -26,9 +26,9 @@ export const ProductsNew = () => {
     },
     {
       image: eventStall,
-      title: "Event Stalls",
-      size: "Live Printing",
-      features: ["Instant photo capture", "On-site editing & printing", "Perfect for weddings & parties"],
+      title: "Event Services",
+      size: "Live Photo Printing",
+      features: ["On-site photo booth setup", "Instant click, edit & print", "Perfect for weddings & parties"],
     },
   ];
 
