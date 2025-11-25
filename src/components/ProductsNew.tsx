@@ -19,7 +19,7 @@ export const ProductsNew = () => {
       features: ["Fridge magnets only", "Double-sided print", "2-in-1: Magnet + Stand option"],
     },
     {
-      image: acrylicFrame,
+      image: acrylicMagnet,
       title: "Photo Frames",
       size: "5×5 to A4",
       features: ["Normal photo frames", "Table or wall display", "Crystal clear premium acrylic"],
