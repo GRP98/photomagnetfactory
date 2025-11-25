@@ -2,7 +2,7 @@ import logo from "@/assets/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-slate-950 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -16,15 +16,19 @@ export const Footer = () => {
                 Photo Magnet Factory
               </h3>
             </div>
-            <p className="opacity-90">
-              Premium photo magnets, acrylic frames, and live event stalls in Pileru
+            <h4 className="font-semibold text-lg mb-2">
+              Custom Photo Magnets & Acrylic Frames
+            </h4>
+            <p className="opacity-80 text-sm leading-relaxed">
+              Premium personalised prints for gifts, decor & events - with fast delivery, bulk orders, and live on-spot photo-magnet stalls.
             </p>
           </div>
           
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 opacity-90">
+            <ul className="space-y-2 opacity-80">
               <li><a href="#products" className="hover:text-primary transition-colors">Products</a></li>
+              <li><a href="#services" className="hover:text-primary transition-colors">Services</a></li>
               <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
               <li><a href="https://api.whatsapp.com/send?phone=918247475914" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a></li>
             </ul>
@@ -32,7 +36,7 @@ export const Footer = () => {
           
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 opacity-90">
+            <ul className="space-y-2 opacity-80">
               <li>📍 Pileru, Andhra Pradesh</li>
               <li>📱 +91 82474 75914</li>
               <li>
@@ -54,7 +58,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-background/20 pt-8 text-center opacity-90">
+        <div className="border-t border-white/20 pt-8 text-center opacity-80">
           <p>&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
