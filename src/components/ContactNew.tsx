@@ -11,19 +11,29 @@ export const ContactNew = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
+    eventDate: "",
+    eventLocation: "",
+    productInterest: "",
     message: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Format message for WhatsApp with proper encoding
-    const whatsappMessage = `*New Inquiry from ${formData.name}*%0A%0APhone: ${formData.phone}%0AMessage: ${formData.message || 'No message'}`;
+    // Format message for WhatsApp Business with proper encoding
+    const whatsappMessage = `*New Inquiry from ${formData.name}*%0A%0A` +
+      `📱 Phone: ${formData.phone}%0A` +
+      `📧 Email: ${formData.email || 'Not provided'}%0A` +
+      `📅 Event Date: ${formData.eventDate || 'Not specified'}%0A` +
+      `📍 Event Location: ${formData.eventLocation || 'Not specified'}%0A` +
+      `🎯 Product Interest: ${formData.productInterest || 'Not specified'}%0A` +
+      `💬 Message: ${formData.message || 'No additional message'}`;
 
-    // WhatsApp URL
-    const whatsappUrl = `https://wa.me/918247475914?text=${whatsappMessage}`;
+    // WhatsApp Business URL
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=918247475914&text=${whatsappMessage}`;
     
-    // Open WhatsApp
+    // Open WhatsApp Business
     window.open(whatsappUrl, '_blank');
     
     toast({
@@ -32,7 +42,15 @@ export const ContactNew = () => {
     });
 
     // Reset form
-    setFormData({ name: "", phone: "", message: "" });
+    setFormData({ 
+      name: "", 
+      phone: "", 
+      email: "", 
+      eventDate: "", 
+      eventLocation: "", 
+      productInterest: "", 
+      message: "" 
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -80,7 +98,7 @@ export const ContactNew = () => {
                 </div>
                 <Button 
                   variant="heroOutline" 
-                  onClick={() => window.open('https://wa.me/918247475914', '_blank')}
+                  onClick={() => window.open('https://api.whatsapp.com/send?phone=918247475914', '_blank')}
                   className="w-full bg-background text-secondary hover:bg-background/90"
                 >
                   Chat Now
@@ -149,12 +167,42 @@ export const ContactNew = () => {
                   required
                   className="h-12"
                 />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="h-12"
+                />
+                <Input
+                  name="eventDate"
+                  type="date"
+                  placeholder="Event Date"
+                  value={formData.eventDate}
+                  onChange={handleChange}
+                  className="h-12"
+                />
+                <Input
+                  name="eventLocation"
+                  placeholder="Event Location"
+                  value={formData.eventLocation}
+                  onChange={handleChange}
+                  className="h-12"
+                />
+                <Input
+                  name="productInterest"
+                  placeholder="Product Interest (e.g., Photo Magnets, Event Stall)"
+                  value={formData.productInterest}
+                  onChange={handleChange}
+                  className="h-12"
+                />
                 <Textarea
                   name="message"
-                  placeholder="Your Message (Optional)"
+                  placeholder="Additional Message (Optional)"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
+                  rows={3}
                   className="resize-none"
                 />
                 <Button 
