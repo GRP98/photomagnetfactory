@@ -6,7 +6,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-sm shadow-soft">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -30,6 +30,12 @@ export const Header = () => {
               className="text-sm md:text-base text-foreground hover:text-primary transition-colors font-medium"
             >
               Products
+            </button>
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="text-sm md:text-base text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Services
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
