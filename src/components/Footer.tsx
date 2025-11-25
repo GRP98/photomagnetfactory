@@ -6,7 +6,7 @@ export const Footer = () => {
   const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
-    <footer className="bg-slate-950 text-white py-12">
+    <footer className="bg-slate-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Brand Section */}
@@ -49,10 +49,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center space-y-2">
-          <p className="opacity-80 text-sm">
-            📍 Pileru, Andhra Pradesh | 📱 +91 82474 75914 | ✉️ photomagnetfactory@gmail.com
-          </p>
+        <div className="border-t border-white/20 pt-8 text-center">
           <p className="opacity-80">&copy; {new Date().getFullYear()} Photo Magnet Factory. All rights reserved.</p>
         </div>
       </div>
