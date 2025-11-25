@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import photoMagnet from "@/assets/photo-magnet.jpg";
-import acrylicMagnet from "@/assets/acrylic-magnet.jpg";
-import acrylicFrame from "@/assets/acrylic-frame.jpg";
-import photoChocolate from "@/assets/photo-chocolate.jpg";
-import woodFrame from "@/assets/wood-frame.jpg";
+import photoMagnet from "@/assets/photo-magnet-ai.jpg";
+import acrylicMagnet from "@/assets/acrylic-magnet-ai.jpg";
+import woodFrame from "@/assets/wood-frame-ai.jpg";
+import photoChocolate from "@/assets/photo-chocolate-ai.jpg";
 
 export const ProductsNew = () => {
   const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
