@@ -16,13 +16,13 @@ export const ProductsNew = () => {
       image: acrylicMagnet,
       title: "Acrylic Magnets",
       size: "2.5×3.5 to 4×6 inch",
-      features: ["Double-sided print", "2-in-1: Magnet + Stand", "Premium acrylic finish"],
+      features: ["Fridge magnets only", "Double-sided print", "2-in-1: Magnet + Stand option"],
     },
     {
       image: acrylicFrame,
-      title: "Acrylic Frames",
+      title: "Acrylic Photo Frames",
       size: "5×5 to A4",
-      features: ["Crystal clear acrylic", "Table or wall mount", "Modern minimalist design"],
+      features: ["Normal photo frames", "Table or wall display", "Crystal clear premium acrylic"],
     },
     {
       image: eventStall,
