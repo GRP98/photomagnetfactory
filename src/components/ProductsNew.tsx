@@ -20,7 +20,7 @@ export const ProductsNew = () => {
     },
     {
       image: acrylicFrame,
-      title: "Acrylic Photo Frames",
+      title: "Photo Frames",
       size: "5×5 to A4",
       features: ["Normal photo frames", "Table or wall display", "Crystal clear premium acrylic"],
     },
