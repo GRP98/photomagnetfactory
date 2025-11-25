@@ -25,7 +25,7 @@ export const Footer = () => {
               Custom Photo Magnets & Acrylic Frames
             </h4>
             <p className="opacity-80 text-sm">
-              Premium quality prints delivered fast. Perfect for gifts, decor & events.
+              Premium prints delivered fast - gifts, decor & events.
             </p>
           </div>
           
