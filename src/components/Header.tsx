@@ -14,7 +14,7 @@ export const Header = () => {
             <img 
               src={logo} 
               alt="Photo Magnet Factory Logo" 
-              className="w-12 h-12 md:w-14 md:h-14 hover:scale-110 transition-transform duration-300"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full hover:scale-110 transition-transform duration-300"
             />
             <div className="hidden sm:block">
               <h1 className="text-xl md:text-2xl font-bold text-foreground">

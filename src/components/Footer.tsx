@@ -15,7 +15,7 @@ export const Footer = () => {
               <img 
                 src={logo} 
                 alt="Photo Magnet Factory Logo" 
-                className="w-12 h-12"
+                className="w-12 h-12 rounded-full"
               />
               <h3 className="text-2xl font-bold">
                 Photo Magnet Factory
