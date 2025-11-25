@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label";
 import photoMagnet from "@/assets/photo-magnet.jpg";
 import acrylicMagnet from "@/assets/acrylic-magnet.jpg";
 import acrylicFrame from "@/assets/acrylic-frame.jpg";
+import photoChocolate from "@/assets/photo-chocolate.jpg";
+import woodFrame from "@/assets/wood-frame.jpg";
 
 export const ProductsNew = () => {
   const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
@@ -49,7 +51,7 @@ export const ProductsNew = () => {
       ]
     },
     {
-      image: acrylicFrame,
+      image: woodFrame,
       title: "Wood Photo Frames",
       size: "Premium Quality",
       features: [
@@ -65,7 +67,7 @@ export const ProductsNew = () => {
       ]
     },
     {
-      image: acrylicFrame,
+      image: photoChocolate,
       title: "Customized Photo Chocolates",
       size: "Various options",
       features: [
